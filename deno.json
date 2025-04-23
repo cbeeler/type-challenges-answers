@@ -4,9 +4,10 @@
   },
   "imports": {
     "@type-challenges/utils": "npm:@type-challenges/utils@^0.1.1"
-  }
+  },
   "fmt": {
     "exclude": ["**/*.md"],
-    "lineWidth": 220
+    "lineWidth": 220,
+
   }
 }
