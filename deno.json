@@ -7,7 +7,6 @@
   },
   "fmt": {
     "exclude": ["**/*.md"],
-    "lineWidth": 220,
-
+    "lineWidth": 220
   }
 }
