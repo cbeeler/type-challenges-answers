@@ -26,7 +26,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Pop<T extends unknown[]> = T["length"] extends 0 ? [] : T extends [...infer Head, infer Tail] ? [...Head] : never;
+type Pop<T extends unknown[]> = T extends [...infer Head, infer Tail] ? [...Head] : [];
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils";
