@@ -17,9 +17,10 @@
 */
 
 /* _____________ Your Code Here _____________ */
+type Whitespace = " " | "\n" | "\t";
 
-type TrimLeft<S extends string> = S extends `${" " | "\n" | "\t"}${infer A}` ? TrimLeft<A> : S;
-type TrimRight<S extends string> = S extends `${infer A}${" " | "\n" | "\t"}` ? TrimRight<A> : S;
+type TrimLeft<S extends string> = S extends `${Whitespace}${infer A}` ? TrimLeft<A> : S;
+type TrimRight<S extends string> = S extends `${infer A}${Whitespace}` ? TrimRight<A> : S;
 
 type Trim<S extends string> = TrimRight<TrimLeft<S>>;
 
